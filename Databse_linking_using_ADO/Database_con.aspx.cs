@@ -16,7 +16,7 @@ namespace Databse_linking_using_ADO
             //string cs = "server=(LocalDb)\\MSSQLLocalDB;database=Student;integrated Security=SSPI;";
             string cs = ConfigurationManager.ConnectionStrings["Student"].ConnectionString;
             SqlConnection con = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand("select * from Intern_info", con);
+            SqlCommand cmd = new SqlCommand("select * from Student", con);
             con.Open();
             SqlDataReader rdr= cmd.ExecuteReader();
             GridView1.DataSource = rdr;
